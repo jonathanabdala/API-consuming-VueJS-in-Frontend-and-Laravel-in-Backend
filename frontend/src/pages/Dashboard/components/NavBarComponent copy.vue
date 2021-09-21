@@ -2,7 +2,7 @@
 
 <div>
 
-    <p>NavBarComponent</p>
+    <h3 class="logo"><i class="fa fa-users"></i>Logo Marca</h3>
 
 </div>
 
