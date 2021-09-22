@@ -16,8 +16,13 @@
     </div>
 
       <div class="menu">
-
-
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
 
     </div>
@@ -69,8 +74,7 @@ export default {
        }
 
        .name {
-         margin: 0;
-         color:#fff;
+         font-size: 14px;
        }
 
         .status {
