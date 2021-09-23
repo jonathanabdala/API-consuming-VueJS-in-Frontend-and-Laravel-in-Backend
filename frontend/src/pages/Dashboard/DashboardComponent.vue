@@ -23,7 +23,6 @@
  </template>
 
 <script>
-
    import SideBarComponent from './components/SideBarComponent';
    import NavBarComponent from './components/NavBarComponent';
 

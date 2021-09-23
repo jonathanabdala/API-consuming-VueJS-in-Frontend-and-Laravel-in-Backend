@@ -1,28 +1,38 @@
 <template>
+
 <!-- Este conteúdo da DashboardComponent esta no caminho   <div class="pages">
     <slot name="slot pages"></slot> na pasta DashboardComponent  -->
+  
    <DashboardComponent> 
 <div slot="slot-pages" class="content-pages">
-    <p>Início/p>
-</div>
-    
+<header class="title_pages">
+   <p>Inicio</p>
+</header>
 
-   </DashboardComponent>
+
+<CardsComponent/>
+ 
+</div>
+    </DashboardComponent>
 </template>
 
 <script>
 import DashboardComponent from '../Dashboard/DashboardComponent';
+import CardsComponent from '../components/CardsComponent';
 
 export default {
     
     components:{
         DashboardComponent,
+        CardsComponent,
+        
+
         }
      }
     </script>
 
-    <style scoped>
+  <style lang="scss" src="./style.scss" scoped />
 
-    </style>
+    
 
 
