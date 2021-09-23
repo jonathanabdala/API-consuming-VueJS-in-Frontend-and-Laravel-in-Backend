@@ -3,7 +3,7 @@
     <slot name="slot pages"></slot> na pasta DashboardComponent  -->
    <DashboardComponent> 
 <div slot="slot-pages" class="content-pages">
-    <p>Início/p>
+    <p>Produtos</p>
 </div>
     
 
@@ -14,7 +14,7 @@
 import DashboardComponent from '../Dashboard/DashboardComponent';
 
 export default {
-    
+    name:'ProductsComponent'
     components:{
         DashboardComponent,
         }
