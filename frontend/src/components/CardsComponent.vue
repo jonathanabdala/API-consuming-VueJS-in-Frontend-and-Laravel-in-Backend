@@ -4,11 +4,11 @@
 <div class=" content top">
 
 <h3>Clientes</h3>
-   <p class="percentagem"><i class="fa fa-arrow-up"></i>7%</p>
+   <p class="percentage"><i class="fa fa-arrow-up "></i>7%</p>
       </div>
 
 <div class=" content footer">
-    <i class="fa fa-users"></i>
+    <i class="fa fa-users ico "></i>
     <p class="quantidade">10000</p>
 
 
@@ -23,7 +23,10 @@
 
 <script>
 export default{
-
+  name:'CardsComonent',
+  props:{
+    type: Int,
+  }
 }
 
 
@@ -36,7 +39,7 @@ export default{
 .my_card {
     display: flex ;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
     background-color: $purple;
     padding: 15px;
     border-radius: 7px;
@@ -48,10 +51,19 @@ export default{
 }
 .top {
     
+    .percentage{
+      color:$green;
+    }
    
   }
 .footer {
-    
+    .ico {
+      font-size: 40px;
+    }
+    .quantidade{
+      font-size: 30px;
+      margin: 0 ;
+    }
    
   }
 }
