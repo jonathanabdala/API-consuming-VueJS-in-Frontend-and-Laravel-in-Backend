@@ -37,7 +37,7 @@
 <div class="row">
 <div class="col-12 col-md-6">
 
-<ListsComponent/>
+<ListsComponent :users= users/>
         </div>
      </div>
    </div>
@@ -53,6 +53,30 @@ import ListsComponent form '../../components/ListsComponent'
 
 export default {
     name:'HomeComponent',
+    // Ciclo de Vida do Vue.Js e utilizar a API JSONPlaceholder
+    data(){
+        return{
+            users:[]
+        }
+    },
+    mounted() {
+        this.getUsers();
+     },
+
+    methods:{
+        async getUsers(){
+            // Usar endereço da API JSONPLACEHOLDER, e apos a requisição AWAIT 
+           const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+        //    Lógica 
+           if(response.status == 200){
+               this.users = response.data;
+           }else{
+               console.error("Ocorreu um erro na API.");
+           }
+
+        }
+    },
+
     components:{
         DashboardComponent,
         CardsComponent,
