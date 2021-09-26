@@ -3,13 +3,14 @@
 <div class="my_card">
 <div class=" content top">
 
-<h3>Clientes</h3>
-   <p class="percentage"><i class="fa fa-arrow-up "></i>7%</p>
+<h3>{{type}}</h3>
+<!-- Renderizar os scripts do Componente sendo passado de forma dinâmica, utilizando as props em export default, definindo o tipo de dado para  type -->
+   <p class="percentage"><i class="fa fa-arrow-up "></i>{{percentage}</p>
       </div>
 
 <div class=" content footer">
-    <i class="fa fa-users ico "></i>
-    <p class="quantidade">10000</p>
+    <i class='fa ico'{{icon}} > </i>
+    <p class="quantidade">{{quantidade}}</p>
 
 
 </div>
@@ -23,9 +24,12 @@
 
 <script>
 export default{
-  name:'CardsComonent',
+  name:'CardsComponent',
   props:{
-    type: Int,
+    type: String,
+    percentage: String,
+    icon: String;
+    quantidade: String;
   }
 }
 
@@ -57,7 +61,7 @@ export default{
    
   }
 .footer {
-    .ico {
+    .icon {
       font-size: 40px;
     }
     .quantidade{
